@@ -1,0 +1,62 @@
+<div class="example-container">
+  <form class="example-form" #formTask="ngForm" (ngSubmit)="setTask(formTask)">
+    <div>
+      <mat-card>Complete name task:
+        <div>
+          <mat-form-field class="example-full-width">
+            <input  ngModel id="title" name="title" matInput placeholder="Clean the room" value="Clean the room">
+          </mat-form-field>
+        </div>
+      </mat-card>
+    </div>
+    <div>
+      <mat-card>Complete Description:
+        <div>
+          <mat-form-field class="example-full-width">
+            <textarea ngModel id="description" name="description" matInput placeholder="I have clean my room"></textarea>
+          </mat-form-field>
+        </div>
+      </mat-card>
+    </div>
+    <div>
+        <mat-card>
+          How important you think it is?
+          <div>
+            <mat-form-field class="example-full-width">
+              <input ngModel id="taskWeight" name="taskWeight" matInput type="number" placeholder="1"/>
+            </mat-form-field>
+          </div>
+        </mat-card>
+    </div>
+
+    <div>
+        <mat-card>
+          Do you think Task is important?
+          <div>
+        <input type="radio" ngModel id="isImportant" name="isImportant" value=true > Is Important
+        <input type="radio" ngModel id="isImportant" name="isImportant" value=false > Not important
+        <div>
+          <button mat-stroked-button color="primary">
+            <input type="submit" value="Add to list" >
+          </button>
+        </div>
+          </div>
+        </mat-card>
+    </div>
+
+  </form>
+  <form #formCollection="ngForm" *ngIf="collectionIsNotEmpty" (ngSubmit)="setCollectionName(formCollection)">
+      <div>
+          <mat-card>Complete Description:
+            <div>
+              <mat-form-field class="example-full-width">
+                <input  ngModel id="taskNameCollection" name="taskNameCollection" matInput placeholder="Example" value="">
+              </mat-form-field>
+            </div>
+            <button  mat-stroked-button color="primary">
+                <input type="submit" value="Add Collection" >
+              </button>
+          </mat-card>
+      </div>
+    </form>
+</div>

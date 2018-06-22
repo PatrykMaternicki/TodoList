@@ -1,0 +1,20 @@
+.example-container > * {
+ width: 100%;
+}
+
+.example-form {
+ width: 100%;
+}
+
+.mat-card {
+ text-align: center;
+}
+
+.mat-form-field-infix
+{
+ width: 500px;
+}
+
+/* .radio {
+ position: absolute;
+} */
